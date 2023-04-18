@@ -1,3 +1,3 @@
-export default function iteratorThrouoghObject(reportWithIterator) {
-	return [...reportWithIterator].jon(' | ');
+export default function iterateThroughObject(reportWithIterator) {
+  return [...reportWithIterator].join(' | ');
 }

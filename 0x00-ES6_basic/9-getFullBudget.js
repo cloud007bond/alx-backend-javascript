@@ -1,13 +1,13 @@
-import getBudgetObject from "./7getBudgetObject";
+/* eslint-disable */
+import getBudgetObject from './7-getBudgetObject';
 
-export default function getFullObject(income, gdp, capital) {
-	const budget = getBudgetObject(income,gdp,capital);
-	const fullBudget = {
-		...budget,
-		getIncomeInEuros(income) {
-			return '${imncome} euros';
-		},
-	};
+export default function getFullBudgetObject(income, gdp, capita) {
+  const budget = getBudgetObject(income, gdp, capita);
+  const fullBudget = {
+    ...budget,
+    getIncomeInDollars: (income) => `$${income}`,
+    getIncomeInEuros: (income) => `${income} euros`,
+  };
 
-	return fullBudget;
+  return fullBudget;
 }
